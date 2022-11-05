@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { CartContext } from '../../contexts/cart.context';
+// import { CartContext } from '../../contexts/cart.context';
 
 import {
   CheckoutItemContainer,
@@ -14,9 +14,9 @@ import {
 
 const CheckoutItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
-
-  const { clearItemFromCart, addItemToCart, removeItemToCart } =
-    useContext(CartContext);
+    //from redux
+  // const { clearItemFromCart, addItemToCart, removeItemToCart } =
+  //   useContext(CartContext);
 
   const clearItemHandler = () => clearItemFromCart(cartItem);
   const addItemHandler = () => addItemToCart(cartItem);

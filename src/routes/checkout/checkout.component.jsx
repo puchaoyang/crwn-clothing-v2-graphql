@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { CartContext } from '../../contexts/cart.context';
+// import { CartContext } from '../../contexts/cart.context';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 
@@ -12,7 +12,8 @@ import {
 } from './checkout.styles';
 
 const Checkout = () => {
-  const { cartItems, cartTotal } = useContext(CartContext);
+  // from redux
+  const { cartItems, cartTotal } = {cartItems:[],cartTotal:0}
 
   return (
     <CheckoutContainer>
